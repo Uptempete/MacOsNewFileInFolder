@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0C13C312F75D67E0035CE8E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D0C13C302F75D67E0035CE8E /* .gitignore */; };
+		D0C13C352F75D6B10035CE8E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D0C13C342F75D6B10035CE8E /* README.md */; };
 		D0D996882F75B721004D979E /* NewFileCreatorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D0D996812F75B721004D979E /* NewFileCreatorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D0C13C302F75D67E0035CE8E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D0C13C342F75D6B10035CE8E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0D996532F75B5B0004D979E /* NewFileCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewFileCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D996602F75B5B1004D979E /* NewFileCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewFileCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D9966A2F75B5B1004D979E /* NewFileCreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewFileCreatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,8 @@
 		D0D9964A2F75B5B0004D979E = {
 			isa = PBXGroup;
 			children = (
+				D0C13C302F75D67E0035CE8E /* .gitignore */,
+				D0C13C342F75D6B10035CE8E /* README.md */,
 				D0D996552F75B5B0004D979E /* NewFileCreator */,
 				D0D996632F75B5B1004D979E /* NewFileCreatorTests */,
 				D0D9966D2F75B5B1004D979E /* NewFileCreatorUITests */,
@@ -293,6 +299,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C13C352F75D6B10035CE8E /* README.md in Resources */,
+				D0C13C312F75D67E0035CE8E /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
