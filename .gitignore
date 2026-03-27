@@ -1,5 +1,6 @@
 # Xcode
 *.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
 *.xcworkspace/xcuserdata/
 *.xcworkspace/xcshareddata/
 DerivedData/
@@ -11,6 +12,10 @@ build/
 *.xccheckout
 *.moved-to-trash
 *.xcuserstate
+*.xcscmblueprint
+*.ipa
+*.dSYM.zip
+*.dSYM
 
 # macOS
 .DS_Store
@@ -19,6 +24,8 @@ build/
 ._*
 .Spotlight-V100
 .Trashes
+.TemporaryItems
+.fseventsd
 
 # Swift Package Manager
 .build/

@@ -9,20 +9,39 @@ import SwiftUI
 
 @main
 struct NewFileCreatorApp: App {
-
-    /// Tracks whether the user has completed onboarding.
-    /// Stored in UserDefaults so it persists across launches.
+    @Environment(\.scenePhase) private var scenePhase
     @AppStorage("onboardingCompleted") private var onboardingCompleted = false
+    @State private var isExtensionEnabled = ExtensionChecker.isFinderExtensionEnabled()
 
     var body: some Scene {
         WindowGroup {
-            if onboardingCompleted {
-                CompletedView()
-            } else {
-                OnboardingView()
+            Group {
+                if onboardingCompleted && isExtensionEnabled {
+                    CompletedView()
+                } else {
+                    OnboardingView()
+                }
+            }
+            .onAppear {
+                refreshPermissionState()
+            }
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .active {
+                    refreshPermissionState()
+                }
             }
         }
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
+    }
+
+    private func refreshPermissionState() {
+        let extensionEnabled = ExtensionChecker.isFinderExtensionEnabled()
+
+        isExtensionEnabled = extensionEnabled
+
+        if !extensionEnabled {
+            onboardingCompleted = false
+        }
     }
 }
